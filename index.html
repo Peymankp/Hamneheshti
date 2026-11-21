@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>هم‌نهشتی مثلث‌ها و نیم‌ساز زاویه</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f8fb;--card:#fff;--tx:#1b2433;--mu:#5b667a;--ln:#d5dce8;--c1:#d9480f;--c2:#1971c2;--c3:#2f9e44;--hl:#fff3bf;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10151f;--card:#1a2232;--tx:#e8edf6;--mu:#9aa6bc;--ln:#33405a;--c1:#ff8a4c;--c2:#5aa9f5;--c3:#51cf66;--hl:#3b3512}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 17px/2 Vazirmatn,Tahoma,sans-serif}
+main{max-width:760px;margin:auto;padding:20px 16px 60px}
+h1{font-size:1.7rem;font-weight:800;margin:.4em 0}
+h2{font-size:1.3rem;font-weight:800;margin:1.6em 0 .4em;border-right:6px solid var(--c2);padding-right:10px}
+.card{background:var(--card);border:1px solid var(--ln);border-radius:12px;padding:14px 16px;margin:14px 0}
+.card h3{margin:0 0 4px;font-size:1.1rem}
+.k{background:var(--hl);padding:0 6px;border-radius:6px;font-weight:600}
+svg{width:100%;height:auto;max-width:460px;display:block;margin:6px auto;direction:ltr}
+svg text{font-family:Vazirmatn,Tahoma,sans-serif;fill:var(--tx);font-size:15px}
+svg .s{stroke:var(--tx);stroke-width:2;fill:none}
+.m{direction:ltr;unicode-bidi:isolate;display:inline-block}
+sub{font-size:.7em}
+ol li{margin:.5em 0}
+.why{color:var(--mu);font-size:.92em}
+.box{border:2px dashed var(--c3);border-radius:12px;padding:10px 14px;margin:12px 0}
+.lg{display:flex;gap:10px;align-items:center;line-height:1.7;margin:3px 0}
+.lg i{width:16px;height:16px;border-radius:50%;flex:none}
+@keyframes pu{0%,100%{opacity:1}50%{opacity:.2}}
+.p{animation:pu 1.6s ease-in-out infinite}
+@media(prefers-reduced-motion:reduce){.p{animation:none}}
+</style>
+</head>
+<body>
+<main>
+<h1>هم‌نهشتی مثلث‌ها و اثبات ویژگی نیم‌ساز</h1>
+
+<h2>۱. هم‌نهشتی یعنی چه؟</h2>
+<p>دو مثلث را <span class="k">هم‌نهشت</span> می‌گوییم، وقتی بتوانیم یکی را روی دیگری بگذاریم و کاملاً بر هم منطبق شوند. پس هر ضلع و هر زاویهٔ یکی، با ضلع و زاویهٔ هم‌جای خودش در مثلث دوم برابر است.</p>
+<p>برای هم‌نهشتی لازم نیست هر ۶ مورد را بررسی کنیم؛ فقط چند حالت خاص کافی است. در شکل‌ها، <b>اجزای متناظر (هم‌جا) با یک رنگ و با هم ضربان می‌زنند</b>؛ هر جفتی که هم‌رنگ و هم‌ضرباهنگ است، با هم برابر است. تعداد خط‌های روی ضلع‌ها و کمان‌های روی زاویه‌ها هم نشان می‌دهد کدام‌ها برابرند. علامت <span class="m">Â</span> یعنی «زاویهٔ A».</p>
+
+<h2>۲. پنج حالت هم‌نهشتی</h2>
+<div class="card"><h3>حالت اول: ضلع، ضلع، ضلع (ض ض ض)</h3>
+<p>اگر سه ضلع یک مثلث با سه ضلع مثلث دیگر برابر باشد، دو مثلث هم‌نهشت‌اند.</p><div id="f1"></div>
+<p class="m">ABC ≅ DEF</p></div>
+
+<div class="card"><h3>حالت دوم: ضلع، زاویه، ضلع (ض ز ض)</h3>
+<p>اگر دو ضلع و <b>زاویهٔ بین آن دو</b> برابر باشند، مثلث‌ها هم‌نهشت‌اند. (زاویه باید بین دو ضلع باشد.)</p><div id="f2"></div>
+<p class="m">ABC ≅ DEF</p></div>
+
+<div class="card"><h3>حالت سوم: زاویه، ضلع، زاویه (ز ض ز)</h3>
+<p>اگر دو زاویه و <b>ضلعی که بین آن دو زاویه است</b> برابر باشند، مثلث‌ها هم‌نهشت‌اند.</p><div id="f3"></div>
+<p class="m">ABC ≅ DEF</p></div>
+
+<p>دو حالت بعدی فقط برای <span class="k">مثلث قائم‌الزاویه</span> است. ضلع روبه‌روی زاویهٔ قائمه (بزرگ‌ترین ضلع) را <b>وتر</b> می‌نامیم.</p>
+
+<div class="card"><h3>حالت چهارم: وتر و یک ضلع</h3>
+<p>در دو مثلث قائم‌الزاویه، اگر وتر و یک ضلع قائمه برابر باشند، مثلث‌ها هم‌نهشت‌اند.</p><div id="f4"></div>
+<p class="m">ABC ≅ DEF</p></div>
+
+<div class="card"><h3>حالت پنجم: وتر و یک زاویهٔ تند</h3>
+<p>در دو مثلث قائم‌الزاویه، اگر وتر و یک زاویهٔ تند (کوچک‌تر از ۹۰°) برابر باشند، مثلث‌ها هم‌نهشت‌اند.</p><div id="f5"></div>
+<p class="m">ABC ≅ DEF</p></div>
+
+<div class="box"><b>نکتهٔ مهم:</b> در نوشتن <span class="m">ABC ≅ DEF</span>، ترتیب حروف مهم است: رأس‌های هم‌جا را در یک جایگاه می‌نویسیم، یعنی <span class="m">A ↔ D</span> و <span class="m">B ↔ E</span> و <span class="m">C ↔ F</span> متناظرند. پس ضلع <span class="m">AB</span> با <span class="m">DE</span> و ضلع <span class="m">BC</span> با <span class="m">EF</span> و زاویهٔ <span class="m">Â</span> با <span class="m">D̂</span> برابر است. بعد از اثبات هم‌نهشتی، همهٔ اجزای متناظر با هم برابرند؛ این همان ابزار اثبات ماست.</div>
+
+<h2>۳. حالا اثبات تمرین ۴</h2>
+<div class="card"><b>حکم:</b> هر نقطه روی نیم‌ساز یک زاویه، از دو ضلع آن زاویه به یک فاصله است.
+<p class="why"><b>یادآوری:</b> فاصلهٔ نقطه از خط، طول پاره‌خطی است که از آن نقطه بر خط عمود می‌شود.</p></div>
+
+<h3>رسم شکل</h3>
+<p>زاویهٔ دلخواه <span class="m">XÔY</span> را می‌کشیم و نیم‌ساز آن را رسم می‌کنیم. نیم‌ساز زاویه را به دو قسمت مساوی <span class="m">Ô<sub>1</sub></span> و <span class="m">Ô<sub>2</sub></span> تقسیم می‌کند. نقطهٔ دلخواه M را روی نیم‌ساز می‌گیریم و عمودهای MH و MK را بر دو ضلع می‌کشیم.</p>
+<div id="p0"></div>
+<p><b>می‌خواهیم ثابت کنیم:</b> <span class="m">MH = MK</span>. برای این کار، دو مثلث <span class="m">OHM</span> و <span class="m">OKM</span> را در نظر می‌گیریم و فرض‌ها را یکی‌یکی به کار می‌بریم.</p>
+
+<div class="card"><h3>مرحله ۱: فرض اول (OM نیم‌ساز است)</h3>
+<div id="p1"></div>
+<p>چون OM نیم‌ساز است: <span class="m">Ô<sub>1</sub> = Ô<sub>2</sub></span>. این دو زاویه، زاویه‌های تند دو مثلث‌اند. پس یک جفت زاویهٔ تند برابر داریم.</p></div>
+
+<div class="card"><h3>مرحله ۲: فرض دوم (MH ⊥ OX)</h3>
+<div id="p2"></div>
+<p>چون MH بر OX عمود است: <span class="m">Ĥ = 90°</span>. پس مثلث OHM قائم‌الزاویه است و وتر آن، ضلع روبه‌روی H، یعنی OM است.</p></div>
+
+<div class="card"><h3>مرحله ۳: فرض سوم (MK ⊥ OY)</h3>
+<div id="p3"></div>
+<p>چون MK بر OY عمود است: <span class="m">K̂ = 90°</span>. پس مثلث OKM هم قائم‌الزاویه است و وتر آن هم OM است.</p></div>
+
+<div class="card"><h3>مرحله ۴: جمع‌بندی</h3>
+<div id="p4"></div>
+<p>در دو مثلث قائم‌الزاویهٔ <span class="m">OHM</span> و <span class="m">OKM</span>:</p>
+<ol>
+<li><span class="m">OM = OM</span> <span class="why">(وتر مشترک)</span></li>
+<li><span class="m">Ô<sub>1</sub> = Ô<sub>2</sub></span> <span class="why">(یک زاویهٔ تند برابر؛ مرحلهٔ ۱)</span></li>
+<li><span class="m">Ĥ = K̂ = 90°</span> <span class="why">(قائم‌الزاویه بودن هر دو؛ مرحله‌های ۲ و ۳)</span></li>
+</ol>
+<p>طبق <span class="k">حالت وتر و یک زاویهٔ تند</span>: <span class="m">OHM ≅ OKM</span>. در مثلث‌های هم‌نهشت، اضلاع متناظر برابرند. MH روبه‌روی <span class="m">Ô<sub>1</sub></span> و MK روبه‌روی <span class="m">Ô<sub>2</sub></span> است، پس:</p>
+<p class="m"><b>MH = MK</b> ✔</p>
+<div class="box">M را <b>دلخواه</b> روی نیم‌ساز گرفتیم و فقط از نیم‌ساز بودن OM و عمود بودن MH و MK استفاده کردیم. پس همین استدلال برای هر نقطهٔ دیگر نیم‌ساز هم درست است و نتیجه برای همهٔ نقاط نیم‌ساز برقرار است. ∎</div></div>
+</main>
+
+<script>
+const S={n:[[20,110],[150,110],[60,25]],r:[[20,110],[150,110],[20,30]]};
+const col=['','var(--c1)','var(--c2)','var(--c3)'];
+const dl=n=>'animation-delay:0s';
+const A='A\u0302',B='B\u0302',D='D\u0302',E='E\u0302';
+const m=t=>`<span class="m">${t}</span>`;
+function draw(id,shape,sides,angs,lg){
+ let o='<svg viewBox="0 0 400 140">';
+ for(let k=0;k<2;k++){
+  const P=S[shape].map(p=>[p[0]+k*210,p[1]]),L=k?'DEF':'ABC';
+  o+='<polygon class="s" points="'+P.join(' ')+'"/>';
+  const cx=(P[0][0]+P[1][0]+P[2][0])/3,cy=(P[0][1]+P[1][1]+P[2][1])/3;
+  for(let i=0;i<3;i++){
+   const a=P[i],b=P[(i+1)%3],n=sides[i]||0,dx=b[0]-a[0],dy=b[1]-a[1],d=Math.hypot(dx,dy),ux=dx/d,uy=dy/d;
+   if(n){o+=`<g class="p" style="${dl(n)}"><line x1="${a[0]}" y1="${a[1]}" x2="${b[0]}" y2="${b[1]}" stroke="${col[n]}" stroke-width="6" stroke-linecap="round"/>`;
+    for(let j=0;j<n;j++){const t=(j-(n-1)/2)*6,mx=(a[0]+b[0])/2+ux*t,my=(a[1]+b[1])/2+uy*t;
+     o+=`<path d="M${mx-uy*9} ${my+ux*9}L${mx+uy*9} ${my-ux*9}" stroke="${col[n]}" stroke-width="2.5"/>`;}
+    o+='</g>';}
+   const g=angs[i],pn=P[(i+1)%3],pp=P[(i+2)%3];
+   const u=[pn[0]-a[0],pn[1]-a[1]],v=[pp[0]-a[0],pp[1]-a[1]],lu=Math.hypot(...u),lv=Math.hypot(...v);
+   u[0]/=lu;u[1]/=lu;v[0]/=lv;v[1]/=lv;
+   if(typeof g==='string'){const q=+g[1],s=14;
+    o+=`<path class="p" style="${dl(q)}" d="M${a[0]} ${a[1]}L${a[0]+u[0]*s} ${a[1]+u[1]*s}L${a[0]+(u[0]+v[0])*s} ${a[1]+(u[1]+v[1])*s}L${a[0]+v[0]*s} ${a[1]+v[1]*s}Z" fill="${col[q]}" fill-opacity=".35" stroke="${col[q]}" stroke-width="2"/>`;}
+   else if(g){const sw=(u[0]*v[1]-u[1]*v[0])>0?1:0,R=a=>26;
+    o+=`<g class="p" style="${dl(g)}"><path d="M${a[0]} ${a[1]}L${a[0]+u[0]*26} ${a[1]+u[1]*26}A26 26 0 0 ${sw} ${a[0]+v[0]*26} ${a[1]+v[1]*26}Z" fill="${col[g]}" fill-opacity=".3"/>`;
+    for(let j=0;j<g;j++){const r=20+j*6;o+=`<path d="M${a[0]+u[0]*r} ${a[1]+u[1]*r}A${r} ${r} 0 0 ${sw} ${a[0]+v[0]*r} ${a[1]+v[1]*r}" stroke="${col[g]}" stroke-width="2.5" fill="none"/>`;}
+    o+='</g>';}
+   o+=`<text x="${a[0]+(a[0]-cx)*.22-4}" y="${a[1]+(a[1]-cy)*.22+5}">${L[i]}</text>`;
+  }
+ }
+ o+='</svg>'+lg.map(([n,t])=>`<div class="lg"><i class="p" style="background:${col[n]};${dl(n)}"></i><span>${t}</span></div>`).join('');
+ document.getElementById(id).innerHTML=o;
+}
+draw('f1','n',[1,2,3],[],[[1,m('AB = DE')+' (ضلع)'],[2,m('BC = EF')+' (ضلع)'],[3,m('CA = FD')+' (ضلع)']]);
+draw('f2','n',[1,0,3],[2,0,0],[[1,m('AB = DE')+' (ضلع)'],[2,m(A+' = '+D)+' (زاویهٔ بین دو ضلع)'],[3,m('AC = DF')+' (ضلع)']]);
+draw('f3','n',[2,0,0],[1,3,0],[[1,m(A+' = '+D)+' (زاویه)'],[2,m('AB = DE')+' (ضلع بین دو زاویه)'],[3,m(B+' = '+E)+' (زاویه)']]);
+draw('f4','r',[2,1,0],['R3',0,0],[[1,m('BC = EF')+' (وتر)'],[2,m('AB = DE')+' (یک ضلع)'],[3,'زاویهٔ قائمه در هر دو مثلث']]);
+draw('f5','r',[0,1,0],['R3',2,0],[[1,m('BC = EF')+' (وتر)'],[2,m(B+' = '+E)+' (یک زاویهٔ تند)'],[3,'زاویهٔ قائمه در هر دو مثلث']]);
+
+function pf(id,mode){
+ const on=x=>mode===x||mode==='s',c=x=>on(x)?'p':'',st=n=>on('s')?'':'';
+ let o='<svg viewBox="0 0 360 260" style="max-width:380px">';
+ if(mode==='s')o+='<path class="p" d="M30 230H211V145Z" fill="var(--c2)" fill-opacity=".22"/><path class="p" d="M30 230L146.7 91L211 145Z" fill="var(--c1)" fill-opacity=".22"/>';
+ o+='<path class="s" d="M30 230H340M30 230L197 31"/><path d="M30 230L240 -18" stroke="var(--c1)" stroke-width="2" stroke-dasharray="6 4" fill="none"/>';
+ o+='<path d="M30 230L211 145M211 145V230M211 145L146.7 91" stroke="var(--tx)" stroke-width="2" fill="none"/>';
+ o+=`<g class="${c('b')}" style="opacity:${on('b')?1:.45}"><path d="M30 230H75A45 45 0 0 0 70.8 211Z" fill="var(--c3)" fill-opacity=".4"/><path d="M30 230L70.8 211A45 45 0 0 0 58.9 195.5Z" fill="var(--c1)" fill-opacity=".4"/><path d="M75 230A45 45 0 0 0 70.8 211" stroke="var(--c3)" stroke-width="2.5" fill="none"/><path d="M70.8 211A45 45 0 0 0 58.9 195.5" stroke="var(--c1)" stroke-width="2.5" fill="none"/></g>`;
+ if(on('s')||on('b'))o+=`<path class="${mode==='s'?'p':''}" d="M30 230L211 145" stroke="var(--c1)" stroke-width="${mode==='s'?6:3}" stroke-linecap="round" fill="none" ${mode==='b'?'opacity=".6"':''}/>`;
+ o+=`<g class="${c('h')}" style="opacity:${on('h')?1:.45}"><path d="M211 145V230" stroke="var(--c2)" stroke-width="6" stroke-linecap="round"/><path d="M211 230H203V222H211Z" fill="var(--c2)" fill-opacity=".5" stroke="var(--c2)" stroke-width="2"/></g>`;
+ o+=`<g class="${c('k')}" style="opacity:${on('k')?1:.45}"><path d="M211 145L146.7 91" stroke="var(--c3)" stroke-width="6" stroke-linecap="round"/><path d="M146.7 91L141.6 97.1L147.7 102.2L152.8 96.1Z" fill="var(--c3)" fill-opacity=".5" stroke="var(--c3)" stroke-width="2"/></g>`;
+ o+='<text x="12" y="248">O</text><text x="336" y="248">X</text><text x="200" y="22">Y</text><text x="218" y="140">M</text><text x="205" y="250">H</text><text x="128" y="86">K</text>';
+ o+='<text x="90" y="222" style="font-size:13px">Ô<tspan dy="4" font-size="10">1</tspan></text><text x="70" y="182" style="font-size:13px">Ô<tspan dy="4" font-size="10">2</tspan></text></svg>';
+ document.getElementById(id).innerHTML=o;
+}
+pf('p0','');pf('p1','b');pf('p2','h');pf('p3','k');pf('p4','s');
+</script>
+</body>
+</html>
